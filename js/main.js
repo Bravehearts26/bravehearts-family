@@ -59,13 +59,13 @@ if (toggle && nav) {
   toggle.addEventListener("click", () => {
     const open = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    toggle.textContent = open ? "Close Menu" : "Open Menu";
+    toggle.setAttribute("aria-label", open ? "Close Menu" : "Open Menu");
   });
   document.querySelectorAll('#site-nav a[href^="#"], a.nav-contact').forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
-      toggle.textContent = "Open Menu";
+      toggle.setAttribute("aria-label", "Open Menu");
     });
   });
 }
