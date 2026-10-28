@@ -1203,8 +1203,10 @@ body:has(.home-hero) .site-header.scrolled .nav-call {
 
 .story-photo {
   width: 100%;
-  height: 520px;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
+  object-position: center center;
   border-radius: 2px;
 }
 
@@ -1549,8 +1551,6 @@ body:has(.home-hero) .site-header.scrolled .nav-call {
   .mission-photos,
   .story,
   .photo-row { grid-template-columns: 1fr 1fr; }
-  .story-photo,
-  .mission-photos img,
   .photo-row img,
   .photo-row img:first-child { height: 280px; }
   .nav a { color: var(--ink); letter-spacing: 0.12em; }
@@ -2428,9 +2428,10 @@ body:has(.home-hero) .site-header.scrolled .nav-call:hover {
 .mission-photos img,
 .mission-photos img:last-child {
   width: 100%;
-  height: 520px;
+  height: auto;
+  aspect-ratio: 740 / 514;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
 }
 
 #team { scroll-margin-top: 88px; }
@@ -2798,11 +2799,7 @@ li,
 .band-white::before { background: #fff; }
 .band-gray::before { background: #f2f3f5; }
 
-.story-photo,
-.slider-viewport,
-.mission img,
-.mission-photos img,
-.mission-photos img:last-child {
+.slider-viewport {
   height: 420px;
 }
 
@@ -2823,9 +2820,7 @@ li,
   .cta-split,
   .split,
   .shared { grid-template-columns: 1fr; }
-  .story-photo,
-  .slider-viewport,
-  .mission img { height: 280px; }
+  .slider-viewport { height: 280px; }
   .header-actions { gap: 8px; }
   .header-actions .nav-contact,
   .header-actions .nav-call { font-size: 13px; }
@@ -3133,8 +3128,8 @@ a.btn:active {
 }
 
 #space.page-hero {
-  background-image: url("../images/space-header.png?v=5");
-  background-position: center 30%;
+  background-image: url("../images/space-couple.jpg?v=1");
+  background-position: 22% 42%;
   background-size: cover;
   overflow: hidden;
 }
@@ -3156,9 +3151,9 @@ a.btn:active {
   max-width: 760px;
   padding: 22px 26px 20px;
   border-radius: 18px;
-  background: rgba(16, 22, 32, 0.28);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  background: rgba(16, 22, 32, 0.72);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 #space .hero-glass h1,
@@ -3646,13 +3641,15 @@ a.btn.inline:hover {
   border: 1px solid #e6e7ee;
   border-radius: 0;
   overflow: hidden;
+  align-items: start;
 }
 
 .job-card img {
   width: 100%;
-  height: 100%;
-  min-height: 420px;
+  height: auto;
+  aspect-ratio: 777 / 1024;
   object-fit: cover;
+  object-position: center center;
   border-radius: 0;
 }
 
@@ -3985,10 +3982,22 @@ a.btn.inline:hover {
   .job-card,
   .contact-layout,
   .resource-rules { grid-template-columns: 1fr; }
-  .job-card img { height: 240px; min-height: 0; }
+  .job-card img { height: auto; max-height: none; aspect-ratio: 777 / 1024; object-fit: cover; object-position: center top; }
 }
 
 .story:not(:has(img)),
 .cta-split:not(:has(img)) {
   grid-template-columns: 1fr;
+}
+
+.mission-photos img,
+.mission-photos img:last-child,
+.mission img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 740 / 514;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 2px;
 }
