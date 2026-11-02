@@ -3128,8 +3128,8 @@ a.btn:active {
 }
 
 #space.page-hero {
-  background-image: url("../images/space-couple.jpg?v=1");
-  background-position: 22% 42%;
+  background-image: url("../images/space-walk.jpg?v=2");
+  background-position: center 18%;
   background-size: cover;
   overflow: hidden;
 }
@@ -3242,7 +3242,7 @@ a.btn:active {
 .bento .icon,
 .bento .icon.mini,
 .bento .icon.mark {
-  color: #1d1d1f;
+  color: #004687;
   background: transparent;
   border: 0;
   box-shadow: none;
@@ -3264,7 +3264,7 @@ a.btn:active {
 .bento-chip:hover .icon,
 .bento .icon:hover {
   background: transparent;
-  color: #1d1d1f;
+  color: #004687;
   border-color: transparent;
 }
 
@@ -3275,6 +3275,79 @@ a.btn:active {
   font-weight: 600;
   line-height: 1.2;
   color: #1d1d1f;
+}
+
+.bento-pricing {
+  grid-column: 1 / -1;
+  padding: 28px 28px 22px;
+  color: #1d1d1f;
+}
+
+.bento-pricing h2 {
+  margin: 0 0 14px;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+}
+
+.bento-pricing p {
+  margin: 0 0 14px;
+  max-width: 72em;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #3a3a3c;
+}
+
+.bento-pricing h3 {
+  margin: 18px 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1d1d1f;
+}
+
+.price-levels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 4px 0 18px;
+}
+
+.price-levels article {
+  background: #f2f3f5;
+  border: 1px solid #e6e7ee;
+  border-radius: 0;
+  padding: 16px 16px 14px;
+}
+
+.price-levels h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.price-levels h3 span {
+  display: block;
+  margin-top: 6px;
+  color: #004687;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.price-levels p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.bento-pricing .price-contact {
+  margin: 8px 0 0;
+  color: #1d1d1f;
+}
+
+.bento-pricing .price-contact a {
+  color: #004687;
 }
 
 .bento-shared {
@@ -3407,6 +3480,8 @@ a.btn:active {
   .bento-chip { grid-column: span 1; }
   .bento-plan img { height: 140px; }
   .bento-scene img { height: 180px; }
+  .price-levels { grid-template-columns: 1fr; }
+  .bento-pricing { padding: 20px 16px 16px; }
 }
 
 @media (max-width: 560px) {
